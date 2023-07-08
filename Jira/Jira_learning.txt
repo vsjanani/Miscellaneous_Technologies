@@ -1,0 +1,80 @@
+tutorial link - https://youtu.be/Wgyirv9juFI
+
+atlassian - install in cloud - login via google, create project and key. 
+
+project is opened.
+
+now, go to backlog, create version, epic
+version is just the version details of epic.
+give epic details, create epic.
+
+now, click on create button on top of jira.
+
+under issue->story, task, bug is all there.
+
+now click story under issue, give story details like story name(test case name), description (test description), tag to tester and epic (all provided as label and dropdown)
+
+now, story is created for each epic.
+click on each story and add story points (label and dropdown) story points - 1 point = 1 hr or 6 hrs. depends on company.
+
+note that all is happening in one single board called backlog unlike rahul shetty
+
+under, same backlog, version, epic and user story is opened and displayed. above user story, create spirint button is there.click that. It will create spirint for epic number (which will be autocreated while creating epic)
+
+now on clicking start sprint, give dates, dashboard gets autopened, drag user stories to sprinit box.
+
+another dashboard auto opened with three boxes. TODO, In progress, Done.
+
+click on any one user story in that dashboard, create subtask (to add task).
+note that task can be added clicking create button on top in jira but it will create common task like reviewing, test case creation etc. to create w.r.t to user story, create subtask
+
+Zephyr:
+
+zephyr is just like ALM.
+
+go to apps in jira, search for zephyr plugin and download.
+
+zephyr is now one of the option like issues, sprints etc. on clicking that, accordion menu is opened with all test plan, test execution options like, traceability, test cases, defects etc.
+
+now if we go click on create on top of jira, along with other options like user story, bug, task, you can also see Test which is created via zephyr plugin.
+
+To create test case:
+
+Zephyr has 3 sub accordion menus like create a test, planning and exuection, reporting.
+
+create a test:
+
+click zephyr plugin -> create a test -> give all the details like, test case name, description and save it.
+
+now go to search test -> test details icon -> give test steps, test data, test result (expected result)
+
+but above is a tedious task if we have hundreds of test cases. importing excel is the right way to do.
+
+for that, zephyr -> import tests - > row number to begin import is "2" (first row carries heading), discriminator -> Test case name change. 
+
+then, mapping window opens where we have zephyr columns in left for which we need to map our excel columns in the right which will be in dropdown.
+
+once mapped, it will be validated and imported successfully.
+
+now again click zephyr in accordion menu, click search tests and find the test cases. click on details image or icon to view the test steps. 
+
+Planning and execution:
+sub menu: Cycle summary:
+
+To add test cases to respective cycle like regression cycle, integration cycle etc,
+
+in accordion menu under zephyr -> Planning and execution -> cycle summary -> create new cycle -> provide cycle name, version details (which we updated during epic creation), duration etc.
+
+now new cycle is created for eg: regression cycle.
+
+Add test cases to cycle:
+
+under regression cycle -> add tests -> select test cases and user who is going to test
+
+Execute test cases:
+
+under planning and exuection -> Search Test Execution -> click on test case under cycle -> click e icon -> pass the test case.
+
+Reporting:
+
+Test summary, Test Metrics, Traceability matrix

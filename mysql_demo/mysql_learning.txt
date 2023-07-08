@@ -1,0 +1,70 @@
+where vs having:
+
+where is used to condition before group by whereas having is used after group by.
+having can use aliases whereas where cannot use alaises for condition.
+
+group by vs partition by:
+
+# user$raw
+6 rows:
+name number_of_registered_entities
+User_1 | 8
+User_2 | 10
+User_3 | 8
+User_2 | 1
+User_3 | 5
+User_1 | 7
+
+# SQL query 1
+GROUP BY:
+SELECT name, SUM(number_of_registered_entities)entitysum from user$raw
+GROUP BY name
+
+# Output 1 
+3 rows:
+name entitysum
+User_1 | 15
+User_2 | 11
+User_3 | 13
+
+# SQL query 2
+PARTITION BY:
+SELECT SUM(number_of_registered_entities) OVER (PARTITION BY name) AS name, entitysum FROM user$raw
+
+# Output 2
+6 rows:
+name entitysum
+User_1 | 15
+User_1 | 15
+User_2 | 11
+User_2 | 11
+User_3 | 13
+User_3 | 13
+
+To show tables:
+show tables;
+
+To get details about table:
+explain tableName;
+
+There are other direct keywords like intersect which is used for two queries not a single query.
+eg:
+select * from customer intersect select * from orders;
+
+difference between rownumber, rank and dense_rank:
+StyleID     ID       RANK      ROW_NUMBER      DENSE_RANK
+----------- -------- --------- --------------- ----------
+1           1        1         1               1
+1           1        1         2               1
+1           1        1         3               1
+1           2        4         4               2
+
+SELECT *,
+row_number() over(order by age) cus
+FROM customer;
+
+replace row_number by rank() or dense_rank()
+
+basically, rank is just like school rank. same values (defined insed order by) gets same rank 1st.
+hence 2nd rank will be skipped and 3rd rank will be mapped to next record.
+

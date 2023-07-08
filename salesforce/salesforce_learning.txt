@@ -1,0 +1,107 @@
+https://agility-platform-6387.lightning.force.com/lightning/page/home
+jansree90-cbly@force.com
+SanjeevKrish@01
+
+
+Salesforce is a leading CRM (Customer Relationship Management) software which is served form cloud. It has more than 800 applications to support various features like generating new leads, acquiring new leads, increasing sales and closing the deals. It is designed to manage the organization's data focused on customer and sales details. It also offers features to customize its inbuilt data structures and GUI to suit the specific needs of a business. More recently, it has started offering the IOT (internet of things) connectivity to the CRM platform.
+
+Standard object - default tables present in salesforce
+Custom Object - user can create own tables
+External object - external tables.
+
+custom object:
+home -> setup ->Platform tools -> object and fields -> object manager -> create -> custom object
+
+once table is created, open fields and relationships -> New -> select type of field (like date or time etc or None if you dont want any of the type category) -> name the field and create it.
+
+Master-detail relationship:
+Go to the child table -> fields and relationships -> New -> Master-child relationship -> select any table to be master from dropdown -> give next next. self explanatory
+
+Lookup relationship:
+Go to the child table -> fields and relationships -> New -> lookup relationship -> select the lookup table from dropdown -> give next next. self explanatory
+
+M-D vs Lookup relationship:
+
+Should the child always have a parent/should the child not be able to exist without a parent?
+Do we need a measurement field on the parent such as a count, sum, min, or max of the child records?
+Do the parent and child objects need to always have the same security settings (ability to view, edit, or delete)?
+Do we need child records to automatically get deleted when the parent record is deleted?
+If you answered “yes” to these questions, then you’ll likely want to create a Master-Detail relationship. Otherwise, a Lookup relationship would be more appropriate.
+
+for more details: https://portstbd.com/master-detail-vs-lookup-relationships-in-salesforce/#:~:text=To%20recap%3A%20a%20master%2Ddetail,can%20exist%20without%20a%20parent.
+
+Schema Builder:
+Pictorial representation of object or table and its relations with other.
+
+It also has tab called Element where using Object label drag option, new table can also be created, fields can be added. New fields to existing table. 
+Precisely, all the operations can be performed using drag and drop using schema builder.
+
+Users tab in accordion menu:
+
+Access level is 4 types:
+
+Organization level
+Object Level
+Field Level
+Record Level
+
+Above are self explanatory.
+
+Automation:
+
+Rules can be set to trigger some action when row is updated in a table.
+Platform tools -> Process Builder
+
+Data Import (excel):
+Administration -> Platform Tools ->Integration -> Data import wizard
+
+Data export:
+Administration -> Data -> Data export
+
+Select the objects, export it, mail will be sent to for excel downloading link. click it and then download.
+
+
+Formula:
+home -> setup ->Platform tools -> object and fields -> object manager -> select any one table -> go to relationship -> select formula -> Advanced formula -> insert field
+
+this is to view output in manipulated formate like below:
+
+eg: table is account which has field amount. If user wants to have a column which is the 15% discount amount.
+
+insert field -> account -> amount
+
+now, in text box, amount - (amount*15) 
+
+now, give next next and save. If we open the account object again, new column with given name and formula will be displayed.
+
+
+VisualForce Page:
+
+The data from the Salesforce objects can be brought into the Visualforce page using variables and expressions. Like other normal programming language, the Visualforce language has expressions, operators and literals, etc. The basic building block of this language is expressions.
+
+The syntax of a Visualforce expression is as below.
+
+{! expression }
+
+Open settings -> developer console (like setup) -> file -> new -> visual force page -> try below code and click preview.
+
+<apex:page >
+    <h1>
+        I'm trying to write html for salesforce
+    </h1>
+    <p>
+        
+        Its ok, not that bad
+    </p>
+    
+   <apex:pageBlock>
+       {!$User.FirstName} {! $User.LastName}
+    </apex:pageBlock>
+</apex:page>
+
+Output will be:
+
+I'm trying to write html for salesforce
+Its ok, not that bad
+
+Janani Sreenivasan
