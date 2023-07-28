@@ -68,3 +68,98 @@ replace row_number by rank() or dense_rank()
 basically, rank is just like school rank. same values (defined insed order by) gets same rank 1st.
 hence 2nd rank will be skipped and 3rd rank will be mapped to next record.
 
+below is to print minimal length city name with alphabetical order and max with alphabetical order:
+
+select country, length(country) from cust order by length(country) asc, country asc limit 1;
+select country, length(country) from cust order by length(country) desc, country asc limit 1;
+select name from cust WHERE NAME REGEXP "^[aeiou]";
+SELECT DISTINCT city FROM station WHERE city REGEXP "^[aeiou].*[aeiou]$"; //this is to print unique city names which starts and ends with vowels.
+
+round vs floor vs ceiling:
+
+round: 0.00 to 0.49 will be rounded to 0 and 0.5 to 0.99 will be rounded to 1.
+floor: 0.00 to 0.99 will be rounded to 0
+ceil: 0.00 to 0.99 will be rounded to 1
+
+query can be written in many ways. I have written in hackerrank and expected output and actual output is same but it is not accepting. Because HR wants without join.
+
+Note: always use case when condition is expected in displaying output.
+
+WORKED:
+select 
+case 
+when g.grade<8 then 'NULL'
+else s.name
+end, 
+g.grade, s.marks 
+from students as s, grades as g 
+where s.marks >= g.min_mark and s.marks <= g.max_mark
+order by g.grade desc, s.name;
+
+ACTUAL:
+SELECT 
+    CASE
+    WHEN grades.grade < 8 THEN 'NULL'
+    ELSE students.name
+    END,
+    grades.grade, students.marks
+    FROM students, grades 
+WHERE students.marks >= grades.min_mark AND students.marks <= grades.max_mark
+ORDER BY grades.grade DESC, students.name
+
+The one i tried:
+select 
+case 
+when g.grade < 8 then 'null'
+else s.name
+end, g.grade, s.marks 
+from students s 
+join grades g 
+on s.marks >= g.min_mark and s.marks <= g.max_mark
+order by g.grade desc, s.name asc, s.marks asc;
+
+
+quick tip:
+
+"using" in mysql is used instead of "on" if, the column name in both table is the same. eg below:
+select e.first_name, e.last_name, d.department_id, d.department_name 
+from employees e 
+join departments d 
+on e.department_id=d.department_id; //here since both are same this can be written as:
+ above line can be written as:
+
+using (department_id)
+
+
+
+select e.first_name, e.last_name, e.job_id, e.department_id, d.department_name
+from employees e 
+join departments d 
+using (deparment_id)
+join locations l
+using (location_id)
+where l.city = "london";
+
+TO return timestamp only in date format:
+
+SELECT DATE(OrderDate) FROM Orders;
+
+
+
+select d.department_name, count(e.department_id) from employees e 
+join departments d 
+using (deparment_id)
+group by d.department_name;
+
+select jh.employee_id, j.job_title, datediff(jh.end_date,jh.start_date) 
+from job_history jh
+join jobs j
+using (job_id)
+where jh.department_id=90;
+
+
+natural join:
+
+same sugar syntax for inner join if there is a common column name. 
+
+select 

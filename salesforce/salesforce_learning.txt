@@ -18,7 +18,7 @@ Master-detail relationship:
 Go to the child table -> fields and relationships -> New -> Master-child relationship -> select any table to be master from dropdown -> give next next. self explanatory
 
 Lookup relationship:
-Go to the child table -> fields and relationships -> New -> lookup relationship -> select the lookup table from dropdown -> give next next. self explanatory
+Go to the child(any) table -> fields and relationships -> New -> lookup relationship -> select the lookup table from dropdown -> give next next. self explanatory
 
 M-D vs Lookup relationship:
 
