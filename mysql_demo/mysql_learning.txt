@@ -162,4 +162,4 @@ natural join:
 
 same sugar syntax for inner join if there is a common column name. 
 
-select 
+select dsgdsg, dsgdsg from gdsgs natural join sdgsdlg;

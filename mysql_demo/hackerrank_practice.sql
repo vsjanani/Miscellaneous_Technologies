@@ -35,6 +35,7 @@ alter table cust add column population bigint;
 alter table students rename cust;
 select * from orders;
 alter table cust rename column customer_id to id;
+explain cust;
 select round(avg(unit_price)) from orders;
 
 /* sample exercise from hackerrank that i cleared*/
