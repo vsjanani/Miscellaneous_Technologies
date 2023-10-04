@@ -55,6 +55,7 @@ select * from SeleniumDemo where id=1 or id=2;
 insert into SeleniumDemo values('janani', 1, 'spokane', 32);
 show databases;
 use qadbt;
+select * from SeleniumDemo;
 select id from fav union select id from SeleniumDemo;
 select * from fav join SeleniumDemo on fav.id = SeleniumDemo.id;
 select * from fav right join SeleniumDemo on fav.id = SeleniumDemo.id;

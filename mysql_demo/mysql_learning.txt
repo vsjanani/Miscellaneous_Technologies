@@ -1,3 +1,11 @@
+To understand well about joins easily and quickly:
+
+https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
+
+union:
+
+takes all distinct rows from both tables. if one column has no value respect to other table, it returns null.
+
 where vs having:
 
 where is used to condition before group by whereas having is used after group by.
@@ -52,6 +60,9 @@ eg:
 select * from customer intersect select * from orders;
 
 difference between rownumber, rank and dense_rank:
+
+for easier understanding with proper example: https://www.sqlshack.com/overview-of-sql-rank-functions/
+
 StyleID     ID       RANK      ROW_NUMBER      DENSE_RANK
 ----------- -------- --------- --------------- ----------
 1           1        1         1               1

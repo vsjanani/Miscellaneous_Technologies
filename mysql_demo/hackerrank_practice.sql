@@ -8,7 +8,7 @@ insert into cust values(6, "Betzy", "89456", "Norway");
 
 delete from cust where country="UAE";
 select * from cust;
-select name from cust where customer_id>2 order by right(name, 3) ASC, customer_id asc;
+select name from cust where id>2 order by right(name, 3) ASC, id asc;
 
 select country, length(country) from cust order by length(country) asc, country asc limit 1;
 select country, length(country) from cust order by length(country) desc, country asc limit 1;
@@ -35,7 +35,6 @@ alter table cust add column population bigint;
 alter table students rename cust;
 select * from orders;
 alter table cust rename column customer_id to id;
-explain cust;
 select round(avg(unit_price)) from orders;
 
 /* sample exercise from hackerrank that i cleared*/

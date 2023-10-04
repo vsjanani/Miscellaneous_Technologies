@@ -43,7 +43,7 @@ use qadbt;
 select * from orders;
 use qadbt;
 select * from customer;
-
+describe orders;
 use qadbt;
 select 
 CASE WHEN customer.state = 'VA' THEN 'VIRGINA'
@@ -52,7 +52,7 @@ as State,
 concat('$',cast(sum(orders.quantity*orders.unit_price) as char)) as "Total Sales"
 from customer 
 inner join orders
-on customer.customer_id = orders.customer_id
+on customer.customer_id = orders.id
 where customer.state = "VA" group by customer.state ;
 
 use qadbt;
