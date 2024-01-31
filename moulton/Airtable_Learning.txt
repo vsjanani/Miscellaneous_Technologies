@@ -1,0 +1,35 @@
+When record enters a view:
+
+this is useful for creating filtered views and zapier automations. For non-integrated/internal
+airtable automations without third party, other conditions like: when record is created/updated etc is enough
+
+To avoid automation running on its own:
+create a checkbox name it as approve automation
+filtered view if checkbox is clicked
+now automation if, record enters a the view table: then do the action.
+
+
+The web clipper extension allows you and other Airtable creators to quickly gather information from webpages and "clip" that information as new records in Airtable. To start adding content from the web to one of your Airtable bases, you need to:
+
+Install the Airtable web clipper browser extension.
+
+Add at least one clip action from a web clipper extension to your browser extension, either: a clip action that you’ve configured yourself, or a clip action configured by another collaborator in a base you have edit access to.
+
+pivot tabe extension
+
+AI assist field 
+
+Batch update extension:
+
+This is to do changes in bulk like increment the values to 1 in all the rows.
+
+Send SMS Extension
+
+Vision Extension - To extract text from images
+
+Field type as barcode can be scanned using airtable mobile app only. But scanned barcode can be viewed in both mobile/web
+
+Roll-up field:
+
+Lets say shipment table B has linked record column of products table A. Now, roll-up field is created to sum the price of products.
+It is like pulling other column values of table A and doing calculation with it. 

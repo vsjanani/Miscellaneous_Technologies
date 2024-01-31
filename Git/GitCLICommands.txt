@@ -1,0 +1,38 @@
+git:
+
+cloning is downloading code from repository for the first time.
+
+to get updates from the same repository, "pull" has to be used instead of "clone"
+
+git:
+
+first time user to create new repository and push code:
+git config --global user.name "vsjanani"
+git config --global user.email "jansree90@gmail.com"
+cd pythonproject #path to upload in git
+git init #.git file will be created to store github reference and notes.
+git add * #to add all the files in the path selected to stash or staging. - stage 1 of commit.
+git status #to check if all the files are added.
+git commit -m "my first commit" #files are now commited and ready to push. github only selects commited files to push.
+git remote add origin *github repository path* #this path is present in the repository created. this is make connection between repository created with local files located path.
+git push origin master #pushes code from local to repository's master branch.
+
+To download the repository for the first time:
+git clone *github repository path*
+regular user:
+cd file path.
+git add *
+git commit -m "message" (-m (once again) for "detailed message") or git commit and click enter to open editor for detailed message and click esc followed by :wq to save and close the editor window.
+git push origin master or git pull origin master
+
+Branches:
+It is used if there are any major changes in the framework. Master branch will carry the routine testing untill sub branch framework changes are done.
+If completed, sub-branch code will get merged with master branch.
+
+cd file path
+git checkout -b branchname #create new branch
+git branch #to check which branch we are in.
+git add *
+git commit -m message
+git push origin branchname
+git checkout branchname #to jump to existing branch.

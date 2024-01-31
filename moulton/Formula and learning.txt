@@ -1,0 +1,9 @@
+=OR($A2="Rest", $A2="Amd")
+
+from openpyxl import load_workbook
+wb = load_workbook("C://Users//jansr//Downloads//dummy.xlsx")
+sheet = wb.active  
+sheet['A1'] = 'Devansh Sharma'  
+  
+sheet.cell(row=2, column=2).value = 5  
+wb.save("C://Users//jansr//Downloads//dummy.xlsx")
