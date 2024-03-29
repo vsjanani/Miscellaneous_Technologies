@@ -1,0 +1,22 @@
+Layer-1: 
+Physical layer-> works on physical shared medium eg: two laptops connected via copper wire and network interface cards. transmits 0s and 1s through voltage.
+problems: 
+Only 2 laptops can work. If more than 2, hub like common device is used. 
+Even then, at a time only one laptop can communicate, otherwise data collision occurs.
+Also, 1 laptop cannot address the specific other laptop. one sender should broadcast to all the laptops not a specific one.
+If error comes, does not which laptop is throwing it.
+So layer-1 isn't intelligent. Need better system.
+
+Layer:2:
+
+MAC-Media access controller -> 1e:4c:5d:7h:dg:df -> 48 bits
+it is combination of company OUI (Organisation unique identifier) and Network interface card number.
+
+Datalink layer covers the payload data (from layer3) to get transferred to other laptop by frame which also has: SFD (data series start 8 bytes), dest MAC address, source MAC address along with payload data.
+
+This is called encapsulation. Meaning protecting data
+Now data is sent to ethernet and check for carries via CSMA (carrier sense something). Meaning, if other laptop is sending signa, this CSMA would detect and wait to avoid collision.
+
+Drawback:
+
+At a time if 2 devices sent data to third, collision occurs but greatly reduced compare to only layer 1.
