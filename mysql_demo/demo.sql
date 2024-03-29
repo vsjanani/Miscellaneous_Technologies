@@ -5,6 +5,7 @@ use sakila;
 describe actor;
 select * from fav;
 use qadbt;
+show tables;
 describe SeleniumDemo;
 insert into SeleniumDemo values("janani", 1, "spokane", 32);
 insert into SeleniumDemo values("darshini", 2, "ambattur", 7);
@@ -41,11 +42,12 @@ describe SeleniumDemo;
 use qadbt;
 select name, concat(id, ",", location) as address from SeleniumDemo;
 select * from SeleniumDemo where id between 1 and 3;
+-- in refers to OR operation
 select * from SeleniumDemo where id in (1,2,3);
 select * from SeleniumDemo where id not in (1,2,3);
 select * from SeleniumDemo where name like "dar%";
 select min(id) as minId from SeleniumDemo;
-select count(name) from SeleniumDemo;
+select count(id), name from SeleniumDemo GROUP BY name;
 select sum(id) from SeleniumDemo;
 select * from SeleniumDemo order by name desc;
 select * from SeleniumDemo limit 2;
@@ -91,4 +93,4 @@ create index index_myfav on fav(colour);
 create view chumma as
 select * from SeleniumDemo;
 select * from chumma;
-select user();
+select userchummanamecountry_codes();

@@ -4,7 +4,8 @@ https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
 
 union:
 
-takes all distinct rows from both tables. if one column has no value respect to other table, it returns null.
+takes all distinct rows from both tables.Result table's column name would be first select statement's column.
+if one column has no value respect to other table, it returns null.
 
 where vs having:
 
