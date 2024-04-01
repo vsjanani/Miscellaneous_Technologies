@@ -19,4 +19,7 @@ Now data is sent to ethernet and check for carries via CSMA (carrier sense somet
 
 Drawback:
 
-At a time if 2 devices sent data to third, collision occurs but greatly reduced compare to only layer 1.
+At a time if 2 devices sent data to third, collision occurs but greatly reduced compare to using only layer 1.
+
+Overcome:
+through switches
