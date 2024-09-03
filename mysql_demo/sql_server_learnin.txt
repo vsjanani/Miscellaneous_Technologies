@@ -1,0 +1,42 @@
+IsNull and is null is different. 
+is null will be used where, where product_name is null
+IsNull can change sql result column value from IsNull to desired/given name,
+Isnull(visits, "empty")
+The above stmt will change any value in visits column if null to empty
+
+
+--what is the average patient visit by gender for patients seen at az with diagnosis > 1000
+--How many patients are included totally
+--my way of writing
+Select Gender, Avg(Visits) as 'Average Visits', count(PatientID) as PatientID
+from dbo.TestTable
+where PatientState = 'GA' and Charges > 1000
+group by Gender
+Order by 2 desc;
+
+--tutor way of writing
+select  Gender, Avg(Visits) as 'Average Visits', count(PatientID) as PatientID
+from(
+Select Gender, Visits, PatientID
+from dbo.TestTable
+where PatientState = 'GA' and Charges > 1000) a
+group by Gender;
+
+Distance per dollar = distancetravelled/monetory cost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
