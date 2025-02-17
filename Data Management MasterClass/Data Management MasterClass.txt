@@ -1,0 +1,9 @@
+Data Management: Collecting, organizing, protecting and storing organization data
+
+Section-4 has the basic screenshot you need to take.
+
+Data Ethics - Getting consent from clients, transparency, Privacy, fairness and accountability.
+
+Steps: Company to give frequent trainings, create guidelines and scenario sample for employees, some employee to monitor the data ethnicity
+
+Example of violating data ethics: Showing incorrect and expected example to management by manipulating the data/choosing selected data instead of random data.
