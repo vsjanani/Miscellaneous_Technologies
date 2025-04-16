@@ -7,3 +7,82 @@ Data Ethics - Getting consent from clients, transparency, Privacy, fairness and 
 Steps: Company to give frequent trainings, create guidelines and scenario sample for employees, some employee to monitor the data ethnicity
 
 Example of violating data ethics: Showing incorrect and expected example to management by manipulating the data/choosing selected data instead of random data.
+
+Chart should start from value 0, no pre assumptions for any metrics while calculating - confirmation bias
+
+outier bias - consious about average if only one of the 10 values is outstanding. dont trust averages
+
+dont rush to conclusions based on initial findings. Try to do deeper analysis and find the pattern
+
+
+**********Ask Michael:**************
+
+Accessibility
+Accuracy
+Completeness
+Consistency (same field values across the systems - for instance: if Frank evans in one system has frankie evans in source - it is an issue) in other system)
+Relevance (not obsolete)
+Timeliness
+Uniqueness
+Validity
+
+DNA, Infor and Salesforce schedule to databricks
+
+how are we ensuring SQL injections attack 1=1 
+zero-day exploit
+
+why we are not considering data virtualization
+
+Master data mgmt. - How are we ensuring master data mgmt, for eg: if a new loan type or product or location is introduced, who is going to handlse that?
+And Is salesforce the MDM? what if the customer data is changed in DNA, will it get updated in salesforce?
+CHL and capital markets - how it varies - who is siloed
+how to pull report if a customer has agri-loan and chl loan?
+
+Where can I see the metadata of a warehouse?
+
+what are the source systems connected to databricks?
+
+where is metadata in EDW?
+How HR process is incorporated?
+
+Collibra, icedq- data governance for accuracy - Data quality tool?
+*******************************************
+
+data modelling vs data architecture:
+
+data architecture: what tools and techs to be used
+data modelling: what Craig does. Creating a model of data for data storage.
+eg: DA is car part, how it should weight and other specs whereas DM is anaysing each part like how engine parts are connected like how transaction/metrics data is connected to inforFSM project
+
+
+3 levels of data models:
+conceptual data model - eg: account
+logical data model - eg: account table has acctid int, acctname string, number etc
+physical data model - carries datatype and primary/foreign keys eg: acctid as integer(10), acctname as varchar(20)
+
+data storage and operations : done by data base administratir
+
+DMS vs CMS - document mgmt. system and content mgmt. sys
+dms represents Primarily deals with structured data like documents, reports, and forms in formats like Word, PDF, Excel, etc. 
+
+cms- Manages both structured and unstructured content, including documents, web pages, images, videos, and other multimedia assets. 
+
+ECMS- cms falls under ECM. ECM includes all the documentation (structure /unstructured) and their workflow/process
+
+types of data:
+Within an organization's data holdings, there are typically four different types of data, each serving a different function. These types of data include: 
+
+Master Data (dimension table data)
+Transactional Data (fact table data)
+Reference Data (subset of master data - like country code, language etc)
+Freeform Data
+
+for explanations: https://www.data-sentinel.com/resources/the-four-types-of-data
+
+In essence: Master data defines the "what" (e.g., customer, product), while reference data defines the "how" (e.g., state, currency) it's categorized. 
+
+SSIS- integration tool - in vscode ->BI-> integtsyion - grt from different sources like excel, empower and save it in sql server
+
+SSDT- dev tools to create database 
+
+Metadata : Information about data. For eg: If a properties of an image like pixel, size, colour etc
