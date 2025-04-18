@@ -44,6 +44,7 @@ what are the source systems connected to databricks?
 
 where is metadata in EDW?
 How HR process is incorporated?
+Are we getting customer surveys?
 
 Collibra, icedq- data governance for accuracy - Data quality tool?
 *******************************************
@@ -86,3 +87,13 @@ SSIS- integration tool - in vscode ->BI-> integtsyion - grt from different sourc
 SSDT- dev tools to create database 
 
 Metadata : Information about data. For eg: If a properties of an image like pixel, size, colour etc
+
+Mean, Median and Mode :
+Mean is used when there is no outliers
+Meadian should be used when there is outliers
+Mode is to get the most repeated value
+Range - Maximum - Minimum (More the range is, more the deviation and you have to go with Median, if negative number exists, range could be higher than maximum value)
+Standard Deviation: How far is the dataset deviate from the average. For eg: in real estate, it can help to understand, how much the price of a house could deviate from other houses on an average
+
+
+Important to note: Use Histogram chart to analyse data quickly.
