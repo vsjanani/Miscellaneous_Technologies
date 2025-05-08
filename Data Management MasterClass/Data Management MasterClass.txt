@@ -10,7 +10,7 @@ Example of violating data ethics: Showing incorrect and expected example to mana
 
 Chart should start from value 0, no pre assumptions for any metrics while calculating - confirmation bias
 
-outier bias - consious about average if only one of the 10 values is outstanding. dont trust averages
+outier bias - conscious about average if only one of the 10 values is outstanding. dont trust averages
 
 dont rush to conclusions based on initial findings. Try to do deeper analysis and find the pattern
 
@@ -37,16 +37,20 @@ Master data mgmt. - How are we ensuring master data mgmt, for eg: if a new loan 
 And Is salesforce the MDM? what if the customer data is changed in DNA, will it get updated in salesforce?
 CHL and capital markets - how it varies - who is siloed
 how to pull report if a customer has agri-loan and chl loan?
-
+ta
 Where can I see the metadata of a warehouse?
 
 what are the source systems connected to databricks?
 
 where is metadata in EDW?
 How HR process is incorporated?
-Are we getting customer surveys?
+Are we getting customer surveys and do we have marketing database?
+Do we need data virtualization tools to see real time data but not history? 
 
 Collibra, icedq- data governance for accuracy - Data quality tool?
+Check for colour shades to use.
+Are we going to create python scripts to do continuous validation across layers for data quality assessments?
+
 *******************************************
 
 data modelling vs data architecture:
@@ -58,8 +62,8 @@ eg: DA is car part, how it should weight and other specs whereas DM is anaysing 
 
 3 levels of data models:
 conceptual data model - eg: account
-logical data model - eg: account table has acctid int, acctname string, number etc
-physical data model - carries datatype and primary/foreign keys eg: acctid as integer(10), acctname as varchar(20)
+logical data model - contains PK, FK
+physical data model - carries datatype  eg: acctid as integer(10), acctname as varchar(20)
 
 data storage and operations : done by data base administratir
 
@@ -90,7 +94,7 @@ Metadata : Information about data. For eg: If a properties of an image like pixe
 
 Mean, Median and Mode :
 Mean is used when there is no outliers
-Meadian should be used when there is outliers
+Median should be used when there is outliers
 Mode is to get the most repeated value
 Range - Maximum - Minimum (More the range is, more the deviation and you have to go with Median, if negative number exists, range could be higher than maximum value)
 Standard Deviation: How far is the dataset deviate from the average. For eg: in real estate, it can help to understand, how much the price of a house could deviate from other houses on an average
