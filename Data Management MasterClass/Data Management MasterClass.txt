@@ -50,6 +50,7 @@ Do we need data virtualization tools to see real time data but not history?
 Collibra, icedq- data governance for accuracy - Data quality tool?
 Check for colour shades to use.
 Are we going to create python scripts to do continuous validation across layers for data quality assessments?
+Azure Copy
 
 *******************************************
 
@@ -101,3 +102,7 @@ Standard Deviation: How far is the dataset deviate from the average. For eg: in 
 
 
 Important to note: Use Histogram chart to analyse data quickly.
+
+
+
+
